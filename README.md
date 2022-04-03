@@ -1,7 +1,7 @@
 # qb-clothing
 no pixel style qb-clothing
 
-this clothing menu from arab discord server that share free script so i make work with new qb-core first time conv mysql in the server lol working 
+this clothing menu from arab discord server that share free script so i make work with new qb-core first time conv mysql in the server side lol working 
 
 -
 
