@@ -826,13 +826,13 @@ Citizen.CreateThread(function()
         local menu = nil
 
         if nearcloth < 4.0 then
-            menu = {"clothesmenu", "<FONT FACE = 'Arb'>".."~g~[E]~w~ ﺲﺑﻼﻤﻟﺍ ﺔﻳﺅﺮﻟ | ~g~$~w~"..StoreCost}
+            menu = {"clothesmenu", "~g~[E]~w~ to open shop "..StoreCost}
         elseif neartat < 4.0 then
-            menu = {"tattoomenu", "<FONT FACE = 'Arb'>".."~g~[E]~w~ ﻡﻮﺷﻮﻟﺍ ﺔﻳﺅﺮﻟ | ~g~$~w~"..StoreCost}
+            menu = {"tattoomenu", "~g~[E]~w~ to open shop "..StoreCost}
         elseif nearbarber < 4.0 then
-            menu = {"barbermenu", "<FONT FACE = 'Arb'>".."~g~[E]~w~ ﻕﻼﺤﻟﺍ ﺔﻳﺅﺮﻟ | ~g~$~w~"..StoreCost}
+            menu = {"barbermenu", "~g~[E]~w~ to open shop "..StoreCost}
         elseif nearheal < 2.0 then
-            menu = {"healmenu", "~g~UP~s~ om te Healen"}
+            menu = {"healmenu", "~g~[E]~w~ to open shop "..StoreCost}
         elseif startingMenu then
             menu = "clothesmenu"
         end
@@ -1020,12 +1020,12 @@ RegisterCommand("outfitadd", function(source, args, rawCommand)
             TriggerEvent('raid_clothes:outfits', 1, args[1], args[2])
         else
             -- TriggerEvent('QBCore:Notify', "You need to do something like /outfitadd 1 party | 1 being the slot id, party is the name of your outfit", 1)
-            QBCore.Functions.Notify("لإضافة لبس جديد يجب عليك تغيير الاسم و الرقم", "error")
-            QBCore.Functions.Notify("/outfitadd 1 party  يجب عليك كتبت الاسم بالشكل المطلوب ,, مثال ", "error")
+            QBCore.Functions.Notify("You need to do something like /outfitadd 1 party | 1 being the slot id, party is the name of your outfit", "error")
+            --QBCore.Functions.Notify("/outfitadd 1 party  يجب عليك كتبت الاسم بالشكل المطلوب ,, مثال ", "error")
         end
     else
         -- TriggerEvent('QBCore:Notify', "You are not near a wardrobe", 2)
-        QBCore.Functions.Notify("يجب ان تكون بمتجر الملابس او خزنة المنزل !", "error")
+        QBCore.Functions.Notify("You are not near a wardrobe", "error")
     end
 end, false)
 
@@ -1038,7 +1038,7 @@ RegisterCommand("outfituse", function(source, args, rawCommand)
         end
     else
         -- TriggerEvent('QBCore:Notify', "You are not near a wardrobe", 2)
-        QBCore.Functions.Notify("يجب ان تكون بمتجر الملابس او خزنة المنزل !", "error")
+        QBCore.Functions.Notify("You are not near a wardrobe", "error")
     end
 end, false) 
 
@@ -1051,7 +1051,7 @@ RegisterCommand("outfitdel", function(source, args, rawCommand)
         end
     else
         -- TriggerEvent('DoLongHudText', "You are not near a wardrobe", 2)
-        QBCore.Functions.Notify("يجب ان تكون بمتجر الملابس او خزنة المنزل !", "error")
+        QBCore.Functions.Notify("You are not near a wardrobe", "error")
     end
 end, false) 
 
@@ -1060,7 +1060,7 @@ RegisterCommand("outfits", function(source, args, rawCommand)
         TriggerEvent('raid_clothes:outfits', 4)
     else
         -- TriggerEvent('DoLongHudText', "You are not near a wardrobe", 2)
-        QBCore.Functions.Notify("يجب ان تكون بمتجر الملابس او خزنة المنزل !", "error")
+        QBCore.Functions.Notify("You are not near a wardrobe", "error")
     end
 end, false)  
 
@@ -1098,7 +1098,7 @@ Citizen.CreateThread(function()
 		SetBlipAsShortRange(blip, true)
 
 		BeginTextCommandSetBlipName('STRING')
-		AddTextComponentSubstringPlayerName("<FONT FACE = 'Arb'>".." ﺲﺑﻼﻤﻟﺍ ﺮﺠﺘﻣ")
+		AddTextComponentSubstringPlayerName("clothing Shops")
 		EndTextCommandSetBlipName(blip)
     end
     
@@ -1112,7 +1112,7 @@ Citizen.CreateThread(function()
 		SetBlipAsShortRange(blip, true)
 
 		BeginTextCommandSetBlipName('STRING')
-		AddTextComponentSubstringPlayerName("<FONT FACE = 'Arb'>".."ﻕﻼﺤﻟﺍ")
+		AddTextComponentSubstringPlayerName("barber Shops")
 		EndTextCommandSetBlipName(blip)
     end
     
@@ -1126,7 +1126,7 @@ Citizen.CreateThread(function()
 		SetBlipAsShortRange(blip, true)
 
 		BeginTextCommandSetBlipName('STRING')
-		AddTextComponentSubstringPlayerName("<FONT FACE = 'Arb'>".."ﻡﻮﺷﻮﻟﺍ ﺮﺠﺘﻣ")
+		AddTextComponentSubstringPlayerName("tattoos Shops")
 		EndTextCommandSetBlipName(blip)
 	end
 end)
