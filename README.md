@@ -5,8 +5,7 @@ this clothing menu from arab discord server that share free script so i make wor
 
 you can edit the script bec it free script fill free to edit
 ```
-needs
-
+add this to your server the link down
 ```
 https://github.com/daccakareem/cd_drawtextui
 
