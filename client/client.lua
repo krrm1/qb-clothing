@@ -828,25 +828,27 @@ Citizen.CreateThread(function()
 
 
         local menu = nil
-        local text = '[E] Open $' .. StoreCost .. ''
+        --local text = '[E] Open $' .. StoreCost .. ''
         if nearcloth < 4.0 then
            --  menu = {"clothesmenu", "<FONT FACE = 'Arb'>".."~g~[E]~w~ ﺲﺑﻼﻤﻟﺍ ﺔﻳﺅﺮﻟ | ~g~$~w~"..StoreCost}
            menu = {"clothesmenu"}
             inZone  = true
+	    text = '[E] Open clothing shop $' .. StoreCost .. ' '			
         elseif neartat < 4.0 then
           --  menu = {"tattoomenu", "<FONT FACE = 'Arb'>".."~g~[E]~w~ ﻡﻮﺷﻮﻟﺍ ﺔﻳﺅﺮﻟ | ~g~$~w~"..StoreCost}
             inZone  = true
             menu = {"tattoomenu"}
-
+	    text = '[E] Open tattoo shop $' .. StoreCost .. ' '
         elseif nearbarber < 4.0 then
            -- menu = {"barbermenu", "<FONT FACE = 'Arb'>".."~g~[E]~w~ ﻕﻼﺤﻟﺍ ﺔﻳﺅﺮﻟ | ~g~$~w~"..StoreCost}
             inZone  = true
             menu = {"barbermenu"}
-
+	    text = '[E] Open barber shop $' .. StoreCost .. ' '
         elseif nearheal < 2.0 then
             -- menu = {"healmenu", "~g~UP~s~ om te Healen"}
             inZone  = true
             menu = {"healmenu"}
+	    text = '[E] Open heal shop $' .. StoreCost .. ' '
 
         elseif startingMenu then
             menu = {"clothesmenu"}
