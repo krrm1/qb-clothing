@@ -7,7 +7,7 @@ you can edit the script bec it free script fill free to edit
 
 make sure you add the sql to data
 ```
-add this to your server the link down
+need cd_drawtextui
 ```
 https://github.com/daccakareem/cd_drawtextui
 
