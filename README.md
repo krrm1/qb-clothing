@@ -1,11 +1,7 @@
 # qb-clothing
 no pixel style qb-clothing
 
-this was for qbus the old ver i made it work with new qb-core have fun
-
-you can edit the script bec it free script fill free to edit
-
-make sure you add the sql to data
+make sure to ensure the sql
 ```
 need cd_drawtextui
 ```
