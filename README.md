@@ -1,5 +1,5 @@
 # qb-clothing
-no pixel style qb-clothing
+nopixel clothing menu for qb-core
 
 make sure to ensure the sql
 ```
