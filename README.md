@@ -2,6 +2,8 @@
 nopixel clothing menu for qb-core
 
 make sure to ensure the sql
+
+dont use it bec its not good
 ```
 need cd_drawtextui
 ```
